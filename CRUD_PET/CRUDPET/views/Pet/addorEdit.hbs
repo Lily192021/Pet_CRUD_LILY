@@ -1,0 +1,28 @@
+<h3>{{Pet}}</h3>
+
+
+<form action="/Pet" method="POST" autocomplete="off">
+    <input type="hidden" name="_id" value="{{Pet._id}}">
+    <div class="form-group">
+        <label>Pet_id</label>
+        <input type="text" class="form-control" name="Pet_id" placeholder="Pet_id" value="{{PetController.Pet-id}}">
+        <div class="text-danger">
+            {{PetController.Pet_idError}}</div>
+    </div>
+    <div class="form-group">
+        <label>PetName</label>
+        <input type="text" class="form-control" name="PetName" placeholder="PetName" value="{{PetController.PetName}}">
+        <div class="text-danger">
+             {{PetController.PetNameError}}</div>
+    </div>
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label>PetAge</label>
+            <input type="text" class="form-control" name="PetAge" placeholder="PetAge" value="{{PetController.PetAge}}">
+        </div>
+       
+    <div class="form-group">
+        <button type="submit" class="btn btn-info"><i class="fa fa-database"></i> Submit</button>
+        <a class="btn btn-secondary" href="/Pet/list"><i class="fa fa-list-alt"></i> View All</a>
+    </div>
+</form>
